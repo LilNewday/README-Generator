@@ -1,5 +1,5 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// Function that returns a license badge based on which license is passed in
+// If there is no license, returns an empty string
 function renderLicenseBadge(license) {
   if (license === "MIT") {
     badge =
@@ -24,14 +24,14 @@ function renderLicenseBadge(license) {
   if (license === "Unlicense") {
     badge =
       "![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)";
-  } else if (license === "") {
+  } else if (license === "N/A") {
     badge = "";
   }
   return badge;
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// Function that returns the license link
+// If there is no license, returns an empty string
 function renderLicenseLink(license) {
   if (license === "MIT") {
     link = "(https://opensource.org/licenses/MIT)";
@@ -50,14 +50,14 @@ function renderLicenseLink(license) {
   }
   if (license === "Unlicense") {
     link = "(http://unlicense.org/)";
-  } else if (license === "") {
+  } else if (license === "N/A") {
     link = "";
   }
   return link;
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// Function that returns the license section of README
+// If there is no license, returns an empty string
 function renderLicenseSection(license) {
   if (license === "MIT") {
     section = `MIT License
@@ -1020,7 +1020,7 @@ limitations under the License.`;
     THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     
     For more information, please refer to <https://unlicense.org>`;
-  } else if (license === "") {
+  } else if (license === "N/A") {
     section = "";
   }
   return section;
