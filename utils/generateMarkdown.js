@@ -58,11 +58,11 @@ function renderLicenseLink(license) {
 
 // Function that returns the license section of README
 // If there is no license, returns an empty string
-function renderLicenseSection(license) {
+function renderLicenseSection(license, data) {
   if (license === "MIT") {
     section = `MIT License
 
-    Copyright (c) Year, Full name
+    Copyright (c) ${new Date().getFullYear()}, ${data.github}
 
     Permission is hereby granted, free of charge, to any person obtaining a copy of this 
     software and associated documentation files (the "Software"), to deal in the Software 
@@ -82,7 +82,7 @@ function renderLicenseSection(license) {
     SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.`;
   }
   if (license === "BSD") {
-    section = `Copyright (c) Year, Full name
+    section = `Copyright (c) ${new Date().getFullYear()}, ${data.github}
 
     Redistribution and use in source and binary forms, with or without modification, are 
     permitted provided that the following conditions are met:
@@ -1026,10 +1026,56 @@ limitations under the License.`;
   return section;
 }
 
-// TODO: Create a function to generate markdown for README
+// Function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
 
+  ${renderLicenseBadge(data.license)}
+
+  ## Description
+    ${data.description}
+  
+  ## Table of Contents 
+    - [Description](#description)
+    - [Installation](#installation)
+    - [Usage](#usage)
+    - [License](#license)
+    - [Contributing](#contributing)
+    - [Tests](#tests)
+    - [Questions](#questions)
+  
+  
+  ## Installation
+  
+  To install necessary dependencies, run the following command:
+  
+   [${data.installation}] 
+  
+  ## Usage
+  
+  ${data.usage}
+  
+  ## License
+  
+  ${renderLicenseSection(data.license, data)}
+    
+  ## Contributing
+  
+  ${data.contributing}
+  
+  ## Tests
+  
+  To run tests, run the following command:
+  
+   [${data.test}] 
+  
+  ## Questions
+  
+  If you have any questions about the repo, open an issue or contact me directly at ${
+    data.email
+  }. You can find more of my work at [${data.github}](https://github.com/${
+    data.github
+  }/).
 `;
 }
 
