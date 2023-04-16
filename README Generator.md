@@ -6,13 +6,13 @@
     The goal was to create a lazy way to have a professional README without having to type all the stuff. It can generate the table of contents, your github contact information, a short description, license, and of course the name, as well as some installation and usage information.
   
   ## Table of Contents 
-    - [Description](#description)
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [License](#license)
-    - [Contributing](#contributing)
-    - [Tests](#tests)
-    - [Questions](#questions)
+   - [Description](#description)
+   - [Installation](#installation)
+   - [Usage](#usage)
+   - [License](#license)
+   - [Contributing](#contributing)
+   - [Tests](#tests)
+   - [Questions](#questions)
   
   
   ## Installation
@@ -24,6 +24,10 @@
   ## Usage
   
   Run it with node index.js and watch the magic
+  
+  ## Link to Video
+  
+  https://watch.screencastify.com/v/vwoAd9Ul8FGl4y7uPAyO
   
   ## License
   
