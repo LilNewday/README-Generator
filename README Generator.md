@@ -23,7 +23,7 @@
   
   ## Usage
   
-  run node index.js and the rest is history
+  Run it with node index.js and watch the magic
   
   ## License
   
@@ -50,7 +50,7 @@
     
   ## Contributing
   
-  They can contribute how they would like to
+  Just contribute how you would like to
   
   ## Tests
   
